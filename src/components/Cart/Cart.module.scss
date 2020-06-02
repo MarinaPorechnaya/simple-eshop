@@ -1,0 +1,34 @@
+.products_list{
+  &__item{
+    text-align: center;
+    padding: 1ex;
+  }
+
+  &__img{
+    max-width: 200px;
+  }
+&__ol{
+  padding-inline-start: 15px;
+}
+  &__innerli{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__innerli_title {
+    flex-grow: 5;
+    flex-basis: 5rem;
+  }
+  &__innerli_button{
+    flex-grow: 1;
+    flex-basis: 0%;
+  }
+  &__innerli_quantity{
+    flex-grow: 1;
+    flex-basis: 1rem;
+  }
+  &__innerli_price{
+    flex-grow: 2;
+    flex-basis: 2rem;
+    text-align: center;
+  }
+}

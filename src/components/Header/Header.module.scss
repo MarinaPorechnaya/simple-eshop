@@ -1,0 +1,30 @@
+$gray: #f5f5f5;
+.header {
+  background-color: $gray;
+
+  &__a{
+    text-decoration: none;
+  }
+
+  &__raw{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+  }
+
+  &__cart_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__cnt{
+    font-weight: bold;
+    padding: 0 5px;
+  }
+
+  &__cost{
+    padding: 0 30px;
+  }
+}

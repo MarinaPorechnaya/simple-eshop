@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Для лица",
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "parentId": 0
+  },
+  {
+    "id": 2,
+    "title": "Для тела",
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "parentId": 0
+  },
+  {
+    "id": 3,
+    "title": "Для дома",
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "parentId": 0
+  },
+  {
+    "id": 4,
+    "title": "Для детей",
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "parentId": 0
+  },
+  {
+    "id": 5,
+    "title": "SPF+",
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "parentId": 0
+  },
+  {
+    "id": 6,
+    "title": "Подкатегория 1",
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "parentId": 1
+  },
+  {
+    "id": 7,
+    "title": "Подкатегория 2",
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "parentId": 1
+  },
+  {
+    "id": 8,
+    "title": "Подкатегория 3",
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "parentId": 6
+  },
+  {
+    "id": 9,
+    "title": "Подкатегория 4",
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "parentId": 8
+  },
+  {
+    "id": 10,
+    "title": "Подкатегория 5",
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "parentId": 2
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Крем \"Сияние севера\" spf 30+",
+    "price": 570,
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "categoryId": [0, 1, 5]
+  },
+  {
+    "id": 2,
+    "title": "Б Крем \"Сияние севера\" spf 50+",
+    "price": 109,
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "categoryId": [0, 1, 2, 3, 4, 5, 6, 7]
+  },
+  {
+  "id": 3,
+  "title":  "А Крем для лица \"Сияние севера\"",
+  "price": 504,
+  "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+  "categoryId": [0, 1, 2, 3, 4, 5, 6, 7]
+},
+  {
+    "id": 4,
+    "title": "В Крем для лица с экстрактом алоэ",
+    "price": 199,
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "categoryId": [0, 10]
+  },
+  {
+    "id": 5,
+    "title": "Д Крем \"Сияние севера\" spf 30+",
+    "price": 600,
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "categoryId": [0, 1, 5]
+  },
+  {
+    "id": 6,
+    "title": "Д Крем \"Сияние севера\" spf 50+",
+    "price": 209,
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "categoryId": [0, 1, 2, 3, 4, 5, 6, 7]
+  },
+  {
+    "id": 7,
+    "title":  "Г Крем для лица \"Сияние севера\"",
+    "price": 550,
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "categoryId": [0, 1, 2, 3, 4, 5, 6, 7]
+  },
+  {
+    "id": 8,
+    "title": "Е Крем для лица с экстрактом алоэ",
+    "price": 1090,
+    "img": "http://www.t-mall.ru/InFo-data/item_014/img_0010390.jpg",
+    "categoryId": [0, 6, 7]
+  }
+]
