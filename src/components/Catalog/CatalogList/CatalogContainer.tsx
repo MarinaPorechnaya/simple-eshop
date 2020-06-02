@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {filterByCategory} from '../../../redux/actions'
 import {getFilteredCategories} from '../../../redux/catalogRducer'
-import {getCategoryId} from '../../../redux/combineReducers'
+import {getFilterId} from '../../../redux/combineReducers'
 import {CatalogList} from './CatalogList'
 import {ICategories} from "../../../interfaces";
 
@@ -16,17 +16,22 @@ type MapDispatchToPropsType = {
 
 type CatalogContainerProps = MapStateToPropsType &  MapDispatchToPropsType
 
-const CatalogContainer: React.FC<CatalogContainerProps> = ( { categories, filterByCategory }) => (
-    <CatalogList
-        categories={ categories }
-        filterByCategory={ filterByCategory }
-        //parentId={parentId}
-    />
-)
+const CatalogContainer: React.FC<CatalogContainerProps> = ( { categories, categoryId, filterByCategory }) => {
+    let filteredCategories = categories.filter((category: { parentId: number; }) =>
+        category.parentId === categoryId)
+    return (
+
+        <CatalogList
+            categories={ filteredCategories }
+            filterByCategory={ filterByCategory }
+        />
+    )
+}
+
 
 const mapStateToProps = (state: any): MapStateToPropsType => ({
     categories: getFilteredCategories( state.categories ),
-    categoryId: getCategoryId ( state.categoryId )
+    categoryId:  getFilterId(state)
 })
 
 export default connect(

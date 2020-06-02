@@ -6,8 +6,6 @@ type Props = {
     pageSize: number
     currentPage: number
     onPageChanged: (currentPage: number) => void
-
-    //pageNumber: number
 }
 
 export const Paginator: React.FC<Props> = (props) => {

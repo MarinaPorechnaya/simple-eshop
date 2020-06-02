@@ -2,55 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01871e8e-cfc0-4f4d-924d-429537ff96df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/catalog.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/categories.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/products.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/shop.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Cart/Cart.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Cart/Cart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Cart/CartContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Cart/Product.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/Catalog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/CatalogList/CatalogContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/CatalogList/CatalogList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/CatalogList/CatalogList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/CatalogList/Category.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/ItemsList/CatalogProduct.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/ItemsList/ItemsList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/ItemsList/ItemsList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/ItemsList/ProductCatalogItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/ItemsList/ProductsContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/Paginator/Paginator.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Catalog/Paginator/Paginator.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Checkout/Checkout.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Checkout/Checkout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Checkout/CheckoutContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Checkout/CheckoutProduct.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/cartReducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/catalogRducer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/combineReducers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/productsReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test-eshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test-eshop.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Catalog/CatalogList/CatalogContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Catalog/CatalogList/CatalogContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Catalog/ItemsList/ProductsContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Catalog/ItemsList/ProductsContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Catalog/Paginator/Paginator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Catalog/Paginator/Paginator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/catalogRducer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/catalogRducer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/combineReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/combineReducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/productsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/productsReducer.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +112,7 @@
       <workItem from="1588846619104" duration="52347000" />
       <workItem from="1589596032260" duration="20333000" />
       <workItem from="1589881705046" duration="121449000" />
-      <workItem from="1590666553809" duration="32935000" />
+      <workItem from="1590666553809" duration="41984000" />
     </task>
     <servers />
   </component>

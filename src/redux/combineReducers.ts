@@ -1,14 +1,25 @@
 import { combineReducers } from 'redux'
 import cart, * as fromCart from './cartReducer'
 import products, * as fromProducts from './productsReducer'
-import categories, * as fromCategories from './catalogRducer'
-//import filterId from './catalogRducer'
+import categories from './catalogRducer'
+import {FILTER_BY_CATEGORIES} from "./constants";
+
+const filterId = (state: any = 0, action: any) => {
+    switch (action.type) {
+        case FILTER_BY_CATEGORIES: {
+            return action.categoryId
+        }
+        default:
+            return state
+    }
+}
+
 
 export default combineReducers({
     cart,
     products,
-    categories
-   // filterId
+    categories,
+   filterId
 })
 
 //type RootReducerType = typeof combineReducers
@@ -22,9 +33,8 @@ const getProduct = (state: any, id: number) => fromProducts.getProduct(state.pro
 
 const getVisibleProducts = (state: any) => fromProducts.getVisibleProducts(state)
 
-const getFilterId = (state: any, key: number) => fromCategories.getFilterId(state, key)
-
-//const getFilteredVisibleProducts = (state: any) => fromProducts.getVisibleProducts(state)
+export const getFilterId = (state: any) =>
+    state.filterId
 
 export const getTotal = (state: any) =>
     getAddedIds(state)
@@ -47,35 +57,3 @@ export const getCartProducts = (state: any) =>
         ...getProduct(state, id),
         quantity: getQuantity(state, id)
     }))
-
-const getFilter = (state: any) => {
-    //let filterId = []
-    //filterId = getFilterId(state, 0)
-    //state.filterId[0]
-    return 1//filterId[0]
-}
-
-export const   getFilteredVisibleProducts = (state: any) => {
-   // let filterId = getFilterId(state)
-    let arrayToFilter = getVisibleProducts(state).filter((product: { categoryId: number[] }) =>
-        //product.categoryId.some( val => val === 0))// state.filterId) )
-        product.categoryId.some( val => val === getFilterId(state, 0) ) )
-    return arrayToFilter
-}
-
-
-export const getTotalProductsCountInCategory = (state: any) => {
-    // let filterId = getFilterId(state)
-    let arrayToFilter = getVisibleProducts(state).filter((product: { categoryId: number[] }) =>
-        //product.categoryId.some( val => val === 0))// state.filterId) )
-        product.categoryId.some( val => val === getFilterId(state, 0) ) )
-    return arrayToFilter.length
-}
-/*
-export const getTotalProductsCountInCategory = (state: any) =>{
-   //return getVisibleProducts(state).length
-    return 5
-    }*/
-
-export const getCategoryId = (state: any) =>
-   1

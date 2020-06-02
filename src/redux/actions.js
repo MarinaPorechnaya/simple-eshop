@@ -1,6 +1,5 @@
 import shop from '../api/shop'
 import * as types from './constants'
-import {SET_CURRENT_PAGE} from "./constants";
 
 //-------------------------- Products ------------
 
@@ -15,14 +14,10 @@ export const getAllProducts = () => dispatch => {
     })
 }
 
-const filterByCategoryUnsafe = (categoryId, totalItemsCount) => ({
+const filterByCategoryUnsafe = categoryId => ({
     type: types.FILTER_BY_CATEGORIES,
-    categoryId, totalItemsCount
+    categoryId
 })
-/*
-export const filterProductsByCategory = categoryId => (dispatch) => {
-    dispatch(filterByCategoryUnsafe(categoryId))
-}*/
 //---------------------------END Products----------------
 //---------------------------CATEGORIES---------------
 const receiveCategories = categories => ({
@@ -36,27 +31,11 @@ export const getAllCategories = () => dispatch => {
     })
 }
 
-export const filterByCategory = (categoryId, totalItemsCount) => (dispatch) => {
-    dispatch(filterByCategoryUnsafe(categoryId, totalItemsCount))
+export const filterByCategory = categoryId => (dispatch) => {
+    dispatch(filterByCategoryUnsafe(categoryId))
 }
-
 
 //---------------------------End CATEGORIES----------------
-/*
-export const getAllProducts = (products) => dispatch => {
-    dispatch(getAllItems(products))
-}
-
-const receiveProducts = products => ({
-    type: types.RECEIVE_PRODUCTS,
-    products
-})
-
-export const getAllProducts = () => dispatch => {
-    shop.getProducts(products => {
-        dispatch(getAllItems(products.products))
-    })
-}*/
 
 const addToCartUnsafe = productId => ({
     type: types.ADD_TO_CART,
@@ -76,16 +55,6 @@ const onPageChangedUnsafe = currentPage => ({
 export const onPageChanged = currentPage => (dispatch) => {
         dispatch(onPageChangedUnsafe(currentPage))
 }
-//----- ?
-/*
-const onCategoryChangedUnsafe = totalItemsCount => ({
-    type: types.SET_CURRENT_ITEMS_COUNT_IN_CATEGORY,
-    totalItemsCount
-})
-
-export const onCategoryChanged = totalItemsCount => (dispatch) => {
-    dispatch(onPageChangedUnsafe(totalItemsCount))
-}*/
 //-------------END Pagination -------
 const deleteFromCartUnsafe = productId => ({
     type: types.DELETE_PRODUCT,
@@ -105,26 +74,6 @@ export const minusFromCart = productId => (dispatch, getState) => {
     dispatch(minusFromCartUnsafe(productId))
 }
 //---------------------------End CART----------------
-/*
-const receiveCategories = categories => ({
-    type: types.RECEIVE_CATEGORIES,
-    categories
-})
-
-export const getAllCategories = () => dispatch => {
-    shop.getCategories(categories => {
-        dispatch(receiveCategories(categories))
-    })
-}
-
-const receiveFilteredCategories = categories => ({
-    type: types.FILTER_BY_CATEGORIES,
-    categories
-})
-
-export const filterByCategory = categories => dispatch => {
-        dispatch(receiveFilteredCategories(categories))
-}*/
 
 export const checkout = products => (dispatch, getState) => {
     const { cart } = getState()

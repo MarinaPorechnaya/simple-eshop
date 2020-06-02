@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux'
-import {FILTER_BY_CATEGORIES, ADD_TO_CART, RECEIVE_ITEMS, SET_CURRENT_PAGE, SET_CURRENT_ITEMS_COUNT_IN_CATEGORY} from './constants'
-//import {AppStateType} from "./combineReducers";
+import {ADD_TO_CART, RECEIVE_ITEMS, SET_CURRENT_PAGE} from './constants'
 import {IProducts} from "../interfaces";
-
 
 type HelpersType = {
     type: typeof RECEIVE_ITEMS
@@ -15,26 +13,16 @@ type ProductsType = {
     products:  IProducts[]
     type: typeof ADD_TO_CART
 }
-type FilterByCategoryType = {
-    type: typeof FILTER_BY_CATEGORIES
-    categoryId: number
-    totalItemsCount: number
-}
+
 type CurrentPageType = {
     type: typeof SET_CURRENT_PAGE
     currentPage: number
 }
-type CurrentItemsCountType = {
-    type: typeof SET_CURRENT_ITEMS_COUNT_IN_CATEGORY
-    totalItemsCount: number
-}
 
-type ActionsType = HelpersType | ProductsType | FilterByCategoryType | CurrentPageType | CurrentItemsCountType
+type ActionsType = HelpersType | ProductsType | CurrentPageType
 
 let initialState = {
-   // pageNumber: 1,
     pageSize: 4,
-    totalItemsCount: 19,
     currentPage: 1,
 };
 
@@ -53,26 +41,11 @@ const setPagination = (state: any = initialState, action: ActionsType) => {
     switch (action.type) {
         case SET_CURRENT_PAGE:
             return {...state, currentPage: action.currentPage }
-        case FILTER_BY_CATEGORIES:
-          //  let arrProductsInCategory = getVisibleProducts(state.products)
-          //  arrProductsInCategory = arrProductsInCategory.filter((product: { categoryId: number[] }) =>
-         //   product.categoryId.some( val => val === action.categoryId ) )
-            return {...state, totalItemsCount: 4//arrProductsInCategory.length//state.products lenth of smth with categoryId == action.currentPage // action.totalItemsCount
-            }
         default:
             return state
     }
 }
-/*
-const filterId = (state: any = 0, action: ActionsType) => {
-    switch (action.type) {
-        case FILTER_BY_CATEGORIES: {
-            return action.categoryId
-        }
-        default:
-            return state
-    }
-}*/
+
 const byId = (state: any = {}, action: ActionsType) => {
     switch (action.type) {
         case RECEIVE_ITEMS:
@@ -110,7 +83,6 @@ const visibleIds = (state: any = [], action: ActionsType) => {
 export default combineReducers({
     byId,
     visibleIds,
-   // filterId,
     setPagination
 })
 
@@ -126,16 +98,6 @@ export const getVisibleProducts = (state: any) => {
             return 0
         }))
     return allVisibleProducts
-}
-export const getVisibleProductsOnPage = (state: any) => {
-
-    let filteredVisibleProducts = getVisibleProducts(state)
-
-    let end = state.setPagination.currentPage*state.setPagination.pageSize
-    let start = end - state.setPagination.pageSize + 1
-
-    return filteredVisibleProducts.filter((product: { id: number }) =>
-        product.id >= start && product.id <= end)
 }
 
 export const setProductsPagination = (state: any) => {

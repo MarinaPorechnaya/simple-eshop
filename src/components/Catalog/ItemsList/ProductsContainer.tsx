@@ -1,20 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addToCart, onPageChanged } from '../../../redux/actions'
-import {getVisibleProductsOnPage, setProductsPagination} from '../../../redux/productsReducer'
+import {getVisibleProducts, setProductsPagination} from '../../../redux/productsReducer'
 import ProductCatalogItem from './ProductCatalogItem'
 import ItemsList from './ItemsList'
 import {IProducts} from "../../../interfaces";
 import {Paginator} from "../Paginator/Paginator";
-import {getFilteredVisibleProducts, getTotalProductsCountInCategory} from "../../../redux/combineReducers";
-//import {AppStateType} from "../../../redux/combineReducers";
+import {getFilterId} from "../../../redux/combineReducers";
 
 type MapStateToPropsType = {
     products: IProducts[]
-  //  pageNumber: number
-    pageSize: number
-    totalItemsCount: number
-    currentPage: number
+    filterId: number
     pagination: any
 }
 type MapDispatchToPropsType = {
@@ -24,32 +20,37 @@ type MapDispatchToPropsType = {
 
 type ProductsContainerProps = MapStateToPropsType &  MapDispatchToPropsType
 
-const ProductsContainer: React.FC<ProductsContainerProps> = ( { products,pagination, addToCart, currentPage, totalItemsCount, pageSize, onPageChanged}) => {
+const ProductsContainer: React.FC<ProductsContainerProps> = ( { products, filterId, pagination, addToCart, onPageChanged}) => {
+    let filteredByCategoryProducts = products.filter((product: { categoryId: number[] }) =>
+        product.categoryId.some( val => val === filterId) )
+
+    let totalProductsInCategory = filteredByCategoryProducts.length
+
+    let end = pagination.currentPage*pagination.pageSize
+    let start = end - pagination.pageSize + 1
+
+    filteredByCategoryProducts = filteredByCategoryProducts.filter((product: { id: number }) =>
+        product.id >= start && product.id <= end)
     return (
    <>
        <ItemsList>
-        {products.map((product: any) =>
+        {filteredByCategoryProducts.map((product: any) =>
             <ProductCatalogItem
                 key={product.id}
                 product={product}
                 onAddToCartClicked={() => addToCart(product.id)} />
         )}
         </ItemsList>
-
         <Paginator currentPage={pagination.currentPage}  onPageChanged={onPageChanged}
-                    totalItemsCount={pagination.totalItemsCount} pageSize={pagination.pageSize}/>
+                    totalItemsCount={totalProductsInCategory} pageSize={pagination.pageSize}/>
     </>
 )}
 
 
 const mapStateToProps = (state: any): MapStateToPropsType => ({
-   // products: getVisibleProductsOnPage(state.products),
-    products: getFilteredVisibleProducts (state.products),
+    products: getVisibleProducts(state.products),
     pagination: setProductsPagination(state.products),
-    //pageNumber: 1,
-    pageSize: state.products.pageSize,
-    totalItemsCount: getTotalProductsCountInCategory(state.products),
-    currentPage: 1
+    filterId: getFilterId(state),
 })
 
 export default connect(
